@@ -40,5 +40,9 @@ public class Node<T> implements NodeGeneric<T> {
 		// TODO Auto-generated method stub
 		objectPrevious = node;
 	}
+	
+	public T getT() {
+		return object;
+	}
 
 }

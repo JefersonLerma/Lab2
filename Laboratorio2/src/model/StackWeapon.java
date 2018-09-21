@@ -37,14 +37,40 @@ public class StackWeapon<T> implements Stack<T> {
 
 	@Override
 	public T unStack() {
-	return null;
-	
+	Node<T> nodeDelected = null;
+	int cont = 0;
+	Node<T> act = firstStack;
+	while(act == null) {
+		cont ++;
+		act = (Node<T>) act.giveNext();
+	}
+	if(noWeapons()) {
+		if(cont == 1) {
+			nodeDelected = firstStack;
+			firstStack = null;
+			
+		}else {
+			Node<T> pNodeDelecte = getTop();
+			pNodeDelecte.givePrevious().changeNext(null);;
+			pNodeDelecte.changePreviuos(null);
+			nodeDelected = pNodeDelecte;
+		}
+	}
+	return nodeDelected.getT();
 	}
 
 	@Override
 	public Node<T> getTop() {
 		// TODO Auto-generated method stub
-		return null;
+		Node<T> top = null;
+		if(noWeapons()) {
+		Node<T> current = firstStack;
+		while(current.giveNext() != null) {
+		current = (Node<T>) current.giveNext();	
+		}
+		top = current;
+		}
+		return top;
 	}
 
 
