@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.newWindowController">
+   <children>
+      <ImageView fitHeight="387.0" fitWidth="497.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/background.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="130.0" fitWidth="250.0" layoutX="14.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/gifFinal.gif" />
+         </image>
+         <effect>
+            <DropShadow color="#ff5656" height="35.83" radius="33.7225" spread="0.5" width="101.06" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="428.0" layoutX="35.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/sanvaletin.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.36" contrast="0.29" hue="0.02" saturation="-0.05" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>
